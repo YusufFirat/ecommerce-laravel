@@ -11,16 +11,20 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-
+// default id yerine user_id kullanımı için
+    protected $primaryKey = 'user_id';
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'user_id'
+        'name'
         'email',
-        'password',
+        'password'
+        'is_admin'
+        'is_active',
     ];
 
     /**
