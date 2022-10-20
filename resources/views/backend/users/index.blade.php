@@ -161,13 +161,13 @@
               </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{url("/users/$user->user_id")}}">
+                <a class="nav-link list-item-delete text-black" href="{{url("/users/$user->user_id")}}">
                 <span data-feather="trash-2"></span>
                     Sil
               </a>
               </li>
                  <li class="nav-item">
-                    <a class="nav-link text-black" href="/users">
+                    <a class="nav-link text-black" href="{{url("/users/$user->user_id")}}">
                      <span data-feather="lock"></span>
                       Şifreyi Değiştir
                  </a>

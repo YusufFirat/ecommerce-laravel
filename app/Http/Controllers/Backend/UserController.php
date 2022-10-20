@@ -53,7 +53,7 @@ class UserController extends Controller
         $user->is_active= $is_active;
  // Oluşturduğumuz User Kaydedildi
         $user->save();
-      return redirect()->route('/users');
+      return Redirect::to("/users");
     }
 
     /**
@@ -64,7 +64,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-      return "show";
+        return "a";
     }
 
     /**
@@ -100,7 +100,7 @@ class UserController extends Controller
            $user->is_admin = $is_admin;
            $user->is_active= $is_active;
            $user->save();
-          return redirect()->route('/users');
+          return Redirect::to("/users");
     }
 
     /**
@@ -111,6 +111,10 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        return "destroy";
+
+
+        $user = User::find($id);
+        $user ->delete();
+
     }
 }
